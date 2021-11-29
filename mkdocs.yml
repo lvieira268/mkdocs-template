@@ -1,0 +1,55 @@
+site_name: My Docs
+site_description: My Docs Description
+site_url: https://arduino.github.io/arduino-cli/
+
+repo_name: arduino/arduino-cli
+repo_url: https://github.com/arduino/arduino-cli
+edit_uri: blob/master/docs/
+
+theme:
+  name: material
+  logo: img/icon_mac_light.png
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - header.autohide
+    - navigation.expand
+  icon:
+    repo: fontawesome/brands/github
+  plugins:
+    - git-revision-date-localized:
+      type: date
+    - tags
+    - search
+
+
+markdown_extensions:
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji # 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Topic 1:
+    - topic1/note1.md
+    - topic1/note2.md
+    
